@@ -23,24 +23,24 @@
     font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 16px !important;
+    line-height: 21px !important;
   }
 
   .font-bold-12 {
     font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 12px !important;
+    line-height: 16px !important;
   }
 
   .font-regular-14 {
     font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 }
 

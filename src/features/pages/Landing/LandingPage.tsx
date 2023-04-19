@@ -1,8 +1,15 @@
 import Card from "@/components/Card";
 import useCurrentTime from "@/hooks/useCurrentTime";
+import useTodoList from "@/states/hooks/useTodoList";
+import { useEffect } from "react";
 
 const LandingPage = () => {
   const cntTime = useCurrentTime();
+  const [todolist, dispatch] = useTodoList();
+
+  useEffect(() => {
+    console.log(todolist);
+  }, [todolist]);
 
   return (
     <main className="min-h-screen w-screen">

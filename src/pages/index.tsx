@@ -1,1 +1,1 @@
-export { default } from '@/features/pages/Landing/LandingPage';
+export { default } from '@/features/todo/pages/Landing/LandingPage';

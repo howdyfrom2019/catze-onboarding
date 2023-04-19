@@ -1,12 +1,12 @@
-import { InputHTMLAttributes } from "react";
+import { ComponentProps } from "react";
 
-interface CardProps extends InputHTMLAttributes<HTMLInputElement> {
+interface CardProps extends ComponentProps<"input"> {
   contents: string;
   date?: Date;
   isDone: boolean;
 }
 
-const Card = ({ contents, date, isDone, ...props }: CardProps) => {
+const Card: React.FC<CardProps> = ({ contents, date, isDone, ...props }) => {
   return (
     <section className={'flex justify-between items-center rounded-xl border-gray2 border-2 w-full'}>
       <div className={'flex flex-col gap-4 p-2'}>

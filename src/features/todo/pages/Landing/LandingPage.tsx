@@ -1,5 +1,5 @@
-import Card from "@/components/Card";
-import useCurrentTime from "@/hooks/useCurrentTime";
+import Card from "@/features/todo/components/Card/Card";
+import useCurrentTime from "@/features/todo/hooks/useCurrentTime";
 
 const LandingPage = () => {
   const cntTime = useCurrentTime();

@@ -8,8 +8,11 @@ export interface TodoTypes {
   createdAt: Date;
 }
 
-export const todoList = atom<TodoTypes>({
+const todoList = atom<TodoTypes[]>({
   key: '@todoList',
   default: [],
   effects: [localStorageEffect('@todoList')]
 });
+
+export default todoList;
+

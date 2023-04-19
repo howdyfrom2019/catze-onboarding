@@ -1,6 +1,41 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities {
+  .font-bold-32 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .font-bold-20 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .font-bold-16 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .font-bold-12 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .font-regular-14 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

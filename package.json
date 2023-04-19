@@ -22,5 +22,8 @@
     "recoil": "^0.7.7",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^7.0.0"
   }
 }

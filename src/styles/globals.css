@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities {
+@tailwind utilities;
+
+@layer utilites {
   .font-bold-32 {
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -9,6 +12,7 @@
   }
 
   .font-bold-20 {
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -16,6 +20,7 @@
   }
 
   .font-bold-16 {
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -23,6 +28,7 @@
   }
 
   .font-bold-12 {
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -30,6 +36,7 @@
   }
 
   .font-regular-14 {
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -38,25 +45,5 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  box-sizing: border-box;
 }

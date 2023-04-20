@@ -7,11 +7,11 @@ interface Props {
 
 const TodoAdder: React.FC<Props> = ({ onClickAddBtn }) => {
   return (
-    <section className={'flex flex-col gap-2.5 p-4 bg-gray1 w-full'}>
+    <div className={'flex flex-col gap-2.5 p-4 bg-gray1 w-full'}>
       <span className={'font-regular-14'}>What should I do today?</span>
       <Input onChange={() => {}} />
       <Button className={'self-end'} onClick={() => {}}>Add</Button>
-    </section>
+    </div>
   )
 }
 

@@ -1,12 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { dateParser } from "@/features/todo/utils/dateParser";
 
 const useCurrentTime = (): string => {
-  const [time, currentTime] = useState('INVALID TIME INFO');
+  const [time, setTime] = useState('INVALID TIME INFO');
+  const timer = useRef<NodeJS.Timeout>();
+
+  const startTimer = useCallback(() => {
+    if (!window) return;
+    timer.current = setInterval(() => {
+      const [date, time] = dateParser(new Date());
+      setTime(`${date}${time}`);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
-    if (window !== undefined) {
-      const date = new Date();
-      currentTime(date.toString());
+    startTimer();
+    return () => {
+      if (timer.current) clearInterval(timer.current);
     }
   }, []);
 

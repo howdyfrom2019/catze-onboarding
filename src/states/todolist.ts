@@ -2,7 +2,7 @@ import { atom } from "recoil";
 import localStorageEffect from "@/states/localStorageEffect";
 
 export interface TodoTypes {
-  id: number;
+  id: string;
   isDone: boolean;
   contents: string;
   createdAt: Date;

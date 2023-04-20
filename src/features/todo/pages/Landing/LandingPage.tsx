@@ -2,6 +2,7 @@ import Card from "@/features/todo/components/Card/Card";
 import useCurrentTime from "@/features/todo/hooks/useCurrentTime";
 import TodoAdder from "@/features/todo/components/TodoAdder/TodoAdder";
 import ClickableTimer from '@/features/todo/components/ClickableTimer/ClickableTimer';
+import ScrollTodoContainer from '@/features/todo/components/ScrollTodoContainer/ScrollTodoContainer';
 
 const LandingPage = () => {
   const cntTime = useCurrentTime();
@@ -12,7 +13,8 @@ const LandingPage = () => {
         <span className={'font-bold-32 text-black my-5 self-start'}>Hi! 🤚 Catze!</span>
         <ClickableTimer time={cntTime} />
         <section className={'flex flex-col gap-2 rounded-sm border-gray2 border-[1px] w-full p-[10px]'}>
-          <TodoAdder />
+          <TodoAdder time={cntTime} />
+          <ScrollTodoContainer />
         </section>
       </article>
     </main>

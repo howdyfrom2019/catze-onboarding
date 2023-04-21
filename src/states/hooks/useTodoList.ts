@@ -3,8 +3,8 @@ import todolist, { TodoTypes } from "@/states/todolist";
 
 type TodoAction =
   | { type: 'CREATE', todo: TodoTypes }
-  | { type: 'DELETE', id: number }
-  | { type: 'COMPLETE', id: number }
+  | { type: 'DELETE', id: string }
+  | { type: 'COMPLETE', id: string }
 
 const useTodoList = (): [TodoTypes[], (action: TodoAction) => void] => {
   const [todoList, setTodoList] = useRecoilState(todolist);
@@ -20,7 +20,7 @@ const useTodoList = (): [TodoTypes[], (action: TodoAction) => void] => {
       case 'COMPLETE':
         setTodoList((prev) =>
           prev.map(item => item.id === action.id
-            ? ({ isDone: !item.isDone, ...item })
+            ? ({ ...item, isDone: !item.isDone })
             : item
           ));
         break;

@@ -2,7 +2,8 @@ import Card from "@/features/todo/components/Card/Card";
 import useCurrentTime from "@/features/todo/hooks/useCurrentTime";
 import TodoAdder from "@/features/todo/components/TodoAdder/TodoAdder";
 import ClickableTimer from '@/features/todo/components/ClickableTimer/ClickableTimer';
-import ScrollTodoContainer from '@/features/todo/components/ScrollTodoContainer/ScrollTodoContainer';
+import dynamic from 'next/dynamic';
+const ScrollTodoContainer = dynamic(() => import("@/features/todo/components/ScrollTodoContainer/ScrollTodoContainer"), { ssr: false });
 
 const LandingPage = () => {
   const cntTime = useCurrentTime();

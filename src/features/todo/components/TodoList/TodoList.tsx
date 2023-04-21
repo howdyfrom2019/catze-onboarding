@@ -1,7 +1,7 @@
 import useTodoList from '@/states/hooks/useTodoList';
 import Card from '@/features/todo/components/Card/Card';
 
-const ScrollTodoContainer = () => {
+const TodoList = () => {
   const [todos] = useTodoList();
   return (
     <div className={'flex flex-col gap-2 flex max-h-[389px] overflow-y-scroll'}>
@@ -12,4 +12,4 @@ const ScrollTodoContainer = () => {
   )
 }
 
-export default ScrollTodoContainer;
+export default TodoList;

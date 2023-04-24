@@ -1,5 +1,5 @@
 import useTodoList from '@/states/hooks/useTodoList';
-import Card from '@/features/todo/components/Card/Card';
+import Card from '@/features/todo/components/Card';
 
 const TodoList = () => {
   const [todos] = useTodoList();

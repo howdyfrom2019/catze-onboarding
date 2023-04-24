@@ -1,7 +1,6 @@
-import Check from "../../../../../public/icons/check-circle.svg";
-import CheckFilled from "../../../../../public/icons/check-circle-checked.svg";
 import useTodoList from '@/states/hooks/useTodoList';
 import React, { useCallback } from 'react';
+import Image from 'next/image';
 import clsx from 'clsx';
 
 interface CardProps {
@@ -28,7 +27,7 @@ const Card = ({ id, contents, createdAt, isDone }: CardProps) => {
         <span className={'font-bold-12 text-textGray'}>{createdAt}</span>
       </div>
       <button className={'flex items-center justify-center h-full w-[44px] bg-white'} onClick={onHandleDoneCheck}>
-        {isDone ? <CheckFilled /> : <Check/>}
+        <Image src={clsx(isDone ? './icons/check-circle-checked.svg' : './icons/check-circle.svg')}  alt={'icon_check'} width={'24'} height={'24'} />
       </button>
     </div>
   )

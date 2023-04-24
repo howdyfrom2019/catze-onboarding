@@ -1,8 +1,9 @@
 import useCurrentTime from "@/features/todo/hooks/useCurrentTime";
-import TodoAdder from "@/features/todo/components/TodoAdder/TodoAdder";
-import ClickableTimer from '@/features/todo/components/ClickableTimer/ClickableTimer';
+import TodoForm from "@/features/todo/components/TodoForm";
+import ClickableTimer from '@/features/todo/components/ClickableTimer';
 import dynamic from 'next/dynamic';
-const ScrollTodoContainer = dynamic(() => import("@/features/todo/components/TodoList/TodoList"), { ssr: false });
+import TodoHeader from '@/features/todo/components/TodoHeader';
+const ScrollTodoContainer = dynamic(() => import("@/features/todo/components/TodoList"), { ssr: false });
 
 const LandingPage = () => {
   const cntTime = useCurrentTime();
@@ -10,10 +11,10 @@ const LandingPage = () => {
   return (
     <main className="min-h-screen w-screen">
       <article className={'flex flex-col items-center gap-0.5 w-[395px] mx-auto my-0'}>
-        <span className={'font-bold-32 text-black my-5 self-start'}>Hi! 🤚 Catze!</span>
+        <TodoHeader />
         <ClickableTimer time={cntTime} />
         <section className={'flex flex-col gap-2 rounded-sm border-gray2 border-[1px] w-full p-[10px]'}>
-          <TodoAdder time={cntTime} />
+          <TodoForm time={cntTime} />
           <ScrollTodoContainer />
         </section>
       </article>

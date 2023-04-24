@@ -27,7 +27,7 @@ const Card = ({ id, contents, createdAt, isDone }: CardProps) => {
         <span className={'font-bold-12 text-textGray font-sans'}>{createdAt}</span>
       </div>
       <button className={'flex items-center justify-center h-full w-[44px] bg-white'} onClick={onHandleDoneCheck}>
-        <Image src={clsx(isDone ? './icons/check-circle-checked.svg' : './icons/check-circle.svg')}  alt={'icon_check'} width={'24'} height={'24'} />
+      <Image src={isDone ? './icons/check-circle-checked.svg' : './icons/check-circle.svg'}  alt={'icon_check'} width={'24'} height={'24'} />
       </button>
     </div>
   )

@@ -1,11 +1,7 @@
 import useTodoList from '@/states/hooks/useTodoList';
-import Card from '@/features/todo/components/Card/Card';
+import Card from '@/features/todo/components/Card';
 
-interface Props {
-  className?: string;
-}
-
-const ScrollTodoContainer: React.FC<Props> = ({ className }) => {
+const TodoList = () => {
   const [todos] = useTodoList();
   return (
     <div className={'flex flex-col gap-2 flex max-h-[389px] overflow-y-scroll'}>
@@ -16,4 +12,4 @@ const ScrollTodoContainer: React.FC<Props> = ({ className }) => {
   )
 }
 
-export default ScrollTodoContainer;
+export default TodoList;

@@ -29,7 +29,7 @@ const TodoForm: React.FC<Props> = ({ time }) => {
 
   return (
     <form className={'flex flex-col gap-2.5 p-4 bg-gray1 w-full'} onSubmit={onSubmitTodoItem}>
-      <span className={'font-regular-14'}>What should I do today?</span>
+      <span className={'font-regular-14 font-sans'}>What should I do today?</span>
       <Input name={'@todo'} onChange={onChangeTodo} value={todo} />
       <Input type={'submit'} className={'font-bold-12 bg-blue2 hover:bg-blue3 disabled:bg-gray2 text-white rounded-sm w-20 p-1 self-end cursor-pointer'} value={'Add'} />
     </form>
